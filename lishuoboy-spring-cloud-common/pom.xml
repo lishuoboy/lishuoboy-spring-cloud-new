@@ -13,4 +13,8 @@
         1.为微服模块提供底层功能支持，统一各个微服务模块的配置。微服务模块需要哪个功能，则依赖哪个common模块即可。
         2.一般就是添加相应SB-starter依赖，yaml中配置一下、@Configuration一下
     </description>
+
+    <modules>
+        <module>lishuoboy-spring-cloud-common-core</module>
+    </modules>
 </project>

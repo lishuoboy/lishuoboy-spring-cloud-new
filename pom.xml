@@ -12,7 +12,9 @@
     <artifactId>lishuoboy-spring-cloud</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <description>spring-cloud、spring-cloud-alibaba学习</description>
+    <description>spring-cloud、spring-cloud-alibaba学习
+        1.依赖版本管理
+    </description>
 
     <modules>
         <module>lishuoboy-spring-cloud-biz</module>
@@ -24,6 +26,8 @@
         <!--  SpringCloudAlibaba、SpringCloud、SpringBoot 版本对应依赖关系: https://blog.csdn.net/lishuoboy/article/details/123747938  -->
         <spring-cloud.version>2021.0.5</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.0.5.0</spring-cloud-alibaba.version>
+
+        <lishuoboy-dependency.version>1.0-SNAPSHOT</lishuoboy-dependency.version>
     </properties>
 
     <dependencyManagement>
@@ -43,6 +47,20 @@
                 <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- common下的依赖。start -->
+            <dependency>
+                <groupId>top.lishuoboy</groupId>
+                <artifactId>lishuoboy-spring-cloud-common-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- common下的依赖。end -->
+
+            <dependency>
+                <groupId>top.lishuoboy</groupId>
+                <artifactId>lishuoboy-dependency-sb</artifactId>
+                <version>${lishuoboy-dependency.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
