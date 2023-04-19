@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>top.lishuoboy</groupId>
+        <artifactId>lishuoboy-spring-cloud</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>lishuoboy-spring-cloud-common</artifactId>
+    <packaging>pom</packaging>
+    <description>通用底层功能模块。
+        1.为微服模块提供底层功能支持，统一各个微服务模块的配置。微服务模块需要哪个功能，则依赖哪个common模块即可。
+        2.一般就是添加相应SB-starter依赖，yaml中配置一下、@Configuration一下
+    </description>
+</project>

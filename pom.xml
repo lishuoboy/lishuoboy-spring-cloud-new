@@ -15,6 +15,9 @@
     <description>spring-cloud、spring-cloud-alibaba学习</description>
 
     <modules>
+        <module>lishuoboy-spring-cloud-biz</module>
+        <module>lishuoboy-spring-cloud-common</module>
+        <module>lishuoboy-spring-cloud-middleware</module>
     </modules>
 
     <properties>
