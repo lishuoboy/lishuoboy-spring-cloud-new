@@ -62,6 +62,14 @@
             </dependency>
             <!-- common下的依赖。end -->
 
+            <!-- biz下的依赖。start -->
+            <dependency>
+                <groupId>top.lishuoboy</groupId>
+                <artifactId>lishuoboy-spring-cloud-biz-my-server-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <!-- biz下的依赖。end -->
+
             <dependency>
                 <groupId>top.lishuoboy</groupId>
                 <artifactId>lishuoboy-dependency-sb</artifactId>

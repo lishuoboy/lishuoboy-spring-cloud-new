@@ -14,5 +14,6 @@
     <modules>
         <module>lishuoboy-spring-cloud-biz-my-client</module>
         <module>lishuoboy-spring-cloud-biz-my-server</module>
+        <module>lishuoboy-spring-cloud-biz-my-server-api</module>
     </modules>
 </project>
