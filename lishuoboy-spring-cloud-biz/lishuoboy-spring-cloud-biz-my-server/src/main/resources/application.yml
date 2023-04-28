@@ -3,4 +3,6 @@ server:
 
 spring:
   profiles:
-    active: core
+    active: core,discovery-nacos
+  application:
+    name: @project.artifactId@

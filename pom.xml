@@ -55,6 +55,11 @@
                 <artifactId>lishuoboy-spring-cloud-common-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <dependency>
+                <groupId>top.lishuoboy</groupId>
+                <artifactId>lishuoboy-spring-cloud-common-discovery-nacos</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <!-- common下的依赖。end -->
 
             <dependency>

@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username:
+      password:
+      discovery:
+        enabled: true
+        service: ${spring.application.name}
+        server-addr: ${spring.cloud.nacos.server-addr}
+        username: ${spring.cloud.nacos.username}
+        password: ${spring.cloud.nacos.password}
+        namespace: public # 默认public
+        group: DEFAULT_GROUP
+logging:
+  level:
+    com.alibaba.cloud.nacos: debug
+    # debug级别有异常日志 java.lang.ClassNotFoundException: com.alibaba.nacos.shaded.io.perfmark.impl.SecretPerfMarkImpl$PerfMarkImpl
+    com.alibaba.nacos: info

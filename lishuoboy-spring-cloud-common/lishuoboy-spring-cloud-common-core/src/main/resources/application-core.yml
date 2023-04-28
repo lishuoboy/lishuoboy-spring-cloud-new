@@ -1,0 +1,7 @@
+logging:
+  # spring 非核心 日志级别
+  level:
+    root: info
+    top.lishuoboy: trace
+    org.springframewok.cloud: info
+    com.alibaba.cloud: info

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>top.lishuoboy</groupId>
+        <artifactId>lishuoboy-spring-cloud-common</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <artifactId>lishuoboy-spring-cloud-common-discovery-nacos</artifactId>
+    <description>核心依赖</description>
+
+    <dependencies>
+        <!-- spring-cloud依赖。start -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- spring-cloud依赖。end -->
+
+        <!-- spring-boot依赖。start -->
+        <!-- 此依赖用于写yaml时，idea自动提示 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <!-- spring-boot依赖。end -->
+    </dependencies>
+
+</project>
