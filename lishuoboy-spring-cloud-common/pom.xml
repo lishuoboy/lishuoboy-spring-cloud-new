@@ -17,5 +17,6 @@
     <modules>
         <module>lishuoboy-spring-cloud-common-core</module>
         <module>lishuoboy-spring-cloud-common-discovery-nacos</module>
+        <module>lishuoboy-spring-cloud-common-loadbalancer</module>
     </modules>
 </project>

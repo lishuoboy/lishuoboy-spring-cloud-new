@@ -3,6 +3,6 @@ server:
 
 spring:
   profiles:
-    active: core,discovery-nacos
+    active: core,discovery-nacos,loadbalancer
   application:
     name: @project.artifactId@

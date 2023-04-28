@@ -26,6 +26,10 @@
             <groupId>top.lishuoboy</groupId>
             <artifactId>lishuoboy-spring-cloud-common-discovery-nacos</artifactId>
         </dependency>
+        <dependency>
+            <groupId>top.lishuoboy</groupId>
+            <artifactId>lishuoboy-spring-cloud-common-loadbalancer</artifactId>
+        </dependency>
         <!-- common依赖。end -->
 
         <!-- biz下的依赖。start -->

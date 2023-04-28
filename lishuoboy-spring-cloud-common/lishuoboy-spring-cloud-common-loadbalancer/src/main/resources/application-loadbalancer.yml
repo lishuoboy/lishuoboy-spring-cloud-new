@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    loadbalancer:
+      enabled: true
+
+logging:
+  level:
+    org.springframework.cloud.loadbalancer: debug
