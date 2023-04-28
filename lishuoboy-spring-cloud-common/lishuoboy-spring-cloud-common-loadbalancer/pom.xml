@@ -8,7 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <artifactId>lishuoboy-spring-cloud-common-loadbalancer</artifactId>
-    <description>核心依赖</description>
+    <description>负载均衡</description>
 
     <dependencies>
         <!-- spring-cloud依赖。start -->
