@@ -1,0 +1,10 @@
+logging:
+  level:
+    org.springframework.cloud.openfeign: debug
+    feign: debug
+feign:
+  compression:
+    request:
+      enabled: false
+      min-request-size: 2048
+#      mime-types:

@@ -14,7 +14,7 @@ public class MyServerController {
     int serverPort;
 
     /** http://localhost:8082/myServer/restTemplateTest?name=tomcat */
-    @RequestMapping("/restTemplateTest")
+    @RequestMapping({"/restTemplateTest", "/openFeignTest"})
     private Cat restTemplateTest(String name) {
         log.warn("你好，{}，我是 myServer", name);
         return Cat.builder().id(serverPort).name(name).build();
