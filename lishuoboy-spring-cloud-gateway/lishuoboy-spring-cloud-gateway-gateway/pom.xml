@@ -20,6 +20,14 @@
             <groupId>top.lishuoboy</groupId>
             <artifactId>lishuoboy-spring-cloud-common-gateway-gateway</artifactId>
         </dependency>
+        <dependency>
+            <groupId>top.lishuoboy</groupId>
+            <artifactId>lishuoboy-spring-cloud-common-discovery-nacos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>top.lishuoboy</groupId>
+            <artifactId>lishuoboy-spring-cloud-common-loadbalancer</artifactId>
+        </dependency>
         <!-- common依赖。end -->
 
         <!-- spring-boot依赖。start -->
