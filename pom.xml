@@ -19,6 +19,7 @@
     <modules>
         <module>lishuoboy-spring-cloud-biz</module>
         <module>lishuoboy-spring-cloud-common</module>
+        <module>lishuoboy-spring-cloud-gateway</module>
         <module>lishuoboy-spring-cloud-middleware</module>
     </modules>
 
@@ -68,6 +69,11 @@
             <dependency>
                 <groupId>top.lishuoboy</groupId>
                 <artifactId>lishuoboy-spring-cloud-common-openfeign</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.lishuoboy</groupId>
+                <artifactId>lishuoboy-spring-cloud-common-gateway-gateway</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <!-- common下的依赖。end -->

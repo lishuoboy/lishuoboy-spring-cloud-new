@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: core,gateway-gateway
+  application:
+    name: @project.artifactId@
+  cloud:
+    gateway:
+      routes:
+        - id: biz-my-client                                                     # 路由的ID，没有固定规则但要求唯一，建议配合服务名
+          uri: http://localhost:8081                                            # 匹配后提供服务的路由地址
+          predicates:
+            - Path=/myClient/**                                                 # 断言，路径相匹配的进行路由
+
+        - id: biz-my-server
+          uri: http://localhost:8082
+          predicates:
+            - Path=/myServer/**
+
+
+
+
