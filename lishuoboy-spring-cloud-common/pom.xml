@@ -20,5 +20,6 @@
         <module>lishuoboy-spring-cloud-common-loadbalancer</module>
         <module>lishuoboy-spring-cloud-common-openfeign</module>
         <module>lishuoboy-spring-cloud-common-gateway-gateway</module>
+        <module>lishuoboy-spring-cloud-common-config-nacos</module>
     </modules>
 </project>

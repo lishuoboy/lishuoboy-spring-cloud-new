@@ -1,0 +1,10 @@
+logging:
+  # spring 非核心 日志级别
+  level:
+    com.alibaba.cloud.nacos: debug
+
+spring:
+  config:
+    import:
+      # 公共的配置，如redis ip、端口、密码
+      - nacos:application-public.yml

@@ -30,6 +30,10 @@
             <groupId>top.lishuoboy</groupId>
             <artifactId>lishuoboy-spring-cloud-common-loadbalancer</artifactId>
         </dependency>
+        <dependency>
+            <groupId>top.lishuoboy</groupId>
+            <artifactId>lishuoboy-spring-cloud-common-config-nacos</artifactId>
+        </dependency>
         <!-- common依赖。end -->
 
         <!-- biz下的依赖。start -->

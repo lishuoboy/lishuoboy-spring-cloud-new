@@ -3,10 +3,24 @@ server:
 
 spring:
   profiles:
-    active: core,discovery-nacos,loadbalancer,openfeign
+    active: core,discovery-nacos,loadbalancer,openfeign,config-nacos
   application:
     name: @project.artifactId@
-
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+      username:
+      password:
+      config:
+        namespace: public # 默认public
+        group: DEFAULT_GROUP
+        #file-extension: yml # 使用config.import.此处无用了
+      discovery:
+        namespace: ${spring.cloud.nacos.config.namespace}
+        group: ${spring.cloud.nacos.config.group}
+  config:
+    import:
+      - nacos:@project.artifactId@.yml
 
 #nacos-config的值会覆盖项目中application文件的值
 my:

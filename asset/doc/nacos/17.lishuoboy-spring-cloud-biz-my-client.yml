@@ -1,0 +1,5 @@
+#nacos-config的值会覆盖项目中application文件的值
+my:
+  nickName: 小石头111
+  nacos:
+    name: 李硕111
