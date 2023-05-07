@@ -6,3 +6,10 @@ spring:
     active: core,discovery-nacos,loadbalancer,openfeign
   application:
     name: @project.artifactId@
+
+
+#nacos-config的值会覆盖项目中application文件的值
+my:
+  nickName: 小石头1
+  nacos:
+    name: 李硕

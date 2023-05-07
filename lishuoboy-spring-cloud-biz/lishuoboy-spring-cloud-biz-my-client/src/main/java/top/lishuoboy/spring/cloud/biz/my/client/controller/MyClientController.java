@@ -1,9 +1,11 @@
 package top.lishuoboy.spring.cloud.biz.my.client.controller;
 
+import cn.hutool.core.collection.ListUtil;
 import cn.hutool.core.util.RandomUtil;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 import top.lishuoboy.dependency.sb.json.JacksonUtil;
+import top.lishuoboy.spring.cloud.biz.my.client.config.MyClientNacosProp;
 import top.lishuoboy.spring.cloud.biz.my.server.api.entity.Cat;
 import top.lishuoboy.spring.cloud.biz.my.server.api.service.MyServerApi;
 
@@ -50,5 +53,19 @@ public class MyClientController {
         URI uri = instances.get(index).getUri();
         log.warn("uri=={}", uri.toString());
         return uri.toString();
+    }
+
+
+    /** 对于@Value。nacos修改时，若需自动刷新，需使用 @RefreshScope */
+    @Value("${my.nickName:小石头}")
+    private String nickName;
+    /** 对于@ConfigurationProperties。 nacos修改时，会自动刷新，无需使用 @RefreshScope */
+    @Autowired
+    private MyClientNacosProp nacosProp;
+
+    @GetMapping("/nacosConfigTest")
+    private Object nacosConfigTest() {
+        log.warn("nickName=={}, nacosValue=={}", nickName, nacosProp);
+        return ListUtil.list(false, nickName, nacosProp);
     }
 }

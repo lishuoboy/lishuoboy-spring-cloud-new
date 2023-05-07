@@ -11,6 +11,14 @@
     <description>核心依赖</description>
 
     <dependencies>
+        <!-- spring-boot依赖。start -->
+        <!-- 此依赖用于写yaml时，idea自动提示 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+        <!-- spring-boot依赖。end -->
+
         <dependency>
             <groupId>top.lishuoboy</groupId>
             <artifactId>lishuoboy-dependency-sb</artifactId>
