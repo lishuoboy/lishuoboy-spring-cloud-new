@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,6 +22,8 @@ import top.lishuoboy.spring.cloud.biz.my.server.api.service.MyServerApi;
 import java.net.URI;
 import java.util.List;
 
+// 默认为 ScopedProxyMode.TARGET_CLASS,无法动态实时刷新nacos参数，切导致为null，改为 ScopedProxyMode.DEFAULT
+@RefreshScope(proxyMode = ScopedProxyMode.DEFAULT)
 @Slf4j
 @RestController
 @RequestMapping("/myClient")
@@ -56,10 +60,10 @@ public class MyClientController {
     }
 
 
-    /** 对于@Value。nacos修改时，若需自动刷新，需使用 @RefreshScope */
+    /** 对于@Value。nacos修改时，若需自动动态实时刷新，需使用 @RefreshScope */
     @Value("${my.nickName:小石头}")
     private String nickName;
-    /** 对于@ConfigurationProperties。 nacos修改时，会自动刷新，无需使用 @RefreshScope */
+    /** 对于@ConfigurationProperties。 nacos修改时，会自动动态实时刷新，无需使用 @RefreshScope */
     @Autowired
     private MyClientNacosProp nacosProp;
 
