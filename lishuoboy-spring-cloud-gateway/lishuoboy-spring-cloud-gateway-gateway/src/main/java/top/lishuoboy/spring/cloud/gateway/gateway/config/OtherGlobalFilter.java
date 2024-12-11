@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+/** 匹配上了yml的路由规则，Filter才会执行。比如：gateway自己的Controller，如果未匹配上，Filter不执行 */
 @Order(20)  // 也可以通过实现Ordered接口控制顺序。默认值
 @Slf4j
 @Component

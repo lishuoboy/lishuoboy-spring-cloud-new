@@ -8,6 +8,7 @@ spring:
     name: @project.artifactId@
   cloud:
     gateway:
+      # 匹配上了yml的路由规则，Filter才会执行。比如：gateway自己的Controller，如果未匹配上，Filter不执行
       routes:
         - id: biz-my-client                                                     # 路由的ID，没有固定规则但要求唯一，建议配合服务名
           #uri: http://localhost:8081                                           # 匹配后提供服务的路由地址,写死uri
