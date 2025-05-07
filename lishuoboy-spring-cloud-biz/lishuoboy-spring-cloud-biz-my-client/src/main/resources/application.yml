@@ -8,13 +8,19 @@ spring:
     name: @project.artifactId@
   cloud:
     nacos:
+      # 【注意】begin。nacos-config地址必须写在本application.yml/yaml/properties里，写在application-xxx.yml(如application-dev.yml、application-config-nacos.yml)无效
       server-addr: 127.0.0.1:8848
       username:
       password:
       config:
+        enabled: true  # 默认true
+        server-addr: ${spring.cloud.nacos.server-addr}
+        username: ${spring.cloud.nacos.username}
+        password: ${spring.cloud.nacos.password}
         namespace: public # 默认public
         group: DEFAULT_GROUP
         #file-extension: yml # 使用config.import.此处无用了
+      # 【注意】 end 。nacos-config地址必须写在本application.yml/yaml/properties里，写在application-xxx.yml(如application-dev.yml、application-config-nacos.yml)无效
       discovery:
         namespace: ${spring.cloud.nacos.config.namespace}
         group: ${spring.cloud.nacos.config.group}
